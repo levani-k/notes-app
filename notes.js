@@ -34,7 +34,14 @@ const addNote = (title, body) => {
   }
 };
 
+const removeNote = (title) => {
+  const notes = loadNotes();
+  const newDataWithRemovedNote = notes.filter(note => note.title !== title)
+  saveNotes(newDataWithRemovedNote);
+}
+
 module.exports = {
   getNotes,
   addNote,
+  removeNote,
 };
