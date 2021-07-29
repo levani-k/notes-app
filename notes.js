@@ -30,8 +30,9 @@ const addNote = (title, body) => {
       body: body,
     });
     saveNotes(notes);
+    console.log(chalk.bgGreen("New note added!"))
   } else {
-    console.log("Note Title taken!");
+    console.log(chalk.bgRed("Note Title taken!"));
   }
 };
 
